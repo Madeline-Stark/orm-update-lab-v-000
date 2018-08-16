@@ -74,7 +74,7 @@ class Student
 
     DB[:conn].execute(sql, name).map do |row| #by using name as second argument, it’s replacing the ? in where and only returning those values
         self.new_from_db(row)
-    end.first #chaining .first to return first element of the returned array
+    end #chaining .first to return first element of the returned array
   end
 
   def update
