@@ -28,18 +28,6 @@ class Student
     DB[:conn].execute(sql)
   end
 
-  # def save
-  #   sql = <<-SQL
-  #     INSERT INTO students (name, grade)
-  #     VALUES (?, ?)
-  #   SQL
-  #
-  #   DB[:conn].execute(sql, self.name, self.grade)
-  #
-  #     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0] #grabs id #
-  #
-  # end
-
   def save
       if self.id
         self.update
@@ -77,7 +65,7 @@ class Student
       self.new_from_db(row)
     end.first
   end
-  
+
 
   def update
         sql = <<-SQL
@@ -87,9 +75,6 @@ class Student
         SQL
         DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
-
-  # Remember, you can access your database connection anywhere in this class
-  #  with DB[:conn]
 
 
 end
