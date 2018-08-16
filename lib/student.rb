@@ -77,9 +77,7 @@ class Student
       self.new_from_db(row)
     end.first
   end
-  .execute(sql, name).map do |row|
-      self.new_from_db(row)
-  end.first
+  
 
   def update
         sql = <<-SQL
