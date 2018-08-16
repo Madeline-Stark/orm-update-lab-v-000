@@ -48,7 +48,7 @@ class Student
  end
 
  def self.new_from_db(row)
-    new_student = self.create(row[1], row[2])#wasn't working before b/c using .new instead of create
+    new_student = self.new(row[1], row[2], row[0])
     new_student
   end
 
