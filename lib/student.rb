@@ -59,16 +59,10 @@ class Student
  end
 
  def self.new_from_db(row)
-    new_student = self.create(row[1], row[2])
+    new_student = self.create(row[1], row[2])#wasn't working before b/c using .new instead of create
     new_student
   end
 
- #  def self.find(id, db)
- #   found = db.execute("SELECT * FROM pokemon WHERE id = ?", id) #can't interpolate in sql
- #   lost = []
- #   lost = found.flatten
- #   Pokemon.new(id: lost[0], name: lost[1], type: lost[2], db: db) #need to be key value pairs
- # end
 
   def self.find_by_name(name)
     sql = <<-SQL
