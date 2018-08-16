@@ -64,7 +64,7 @@ class Student
   end
 
  #  def self.find(id, db)
- #   found = db.execute("SELECT * FROM pokemon WHERE id = ?", id) #can't interpolate in sql 
+ #   found = db.execute("SELECT * FROM pokemon WHERE id = ?", id) #can't interpolate in sql
  #   lost = []
  #   lost = found.flatten
  #   Pokemon.new(id: lost[0], name: lost[1], type: lost[2], db: db) #need to be key value pairs
